@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import 'devextreme/data/odata/store';
 
 @Component({
-  templateUrl: 'department.component.html'
+  templateUrl: 'personnel.component.html'
 })
 
-export class DepartmentComponent {
+export class PersonnelComponent {
 
 
   constructor() {

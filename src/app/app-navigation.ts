@@ -5,21 +5,29 @@ export const navigation = [
     icon: 'home'
   },
   {
-    text: 'Department',
+    text: 'User Departments',
     icon: 'folder',
     items: [
       {
-        text: 'All Departments',
+        text: 'Departments',
         path: '/departments'
       },
       {
-        text: 'Profile',
-        path: '/profile'
+        text: 'Sub Departments',
+        path: '/sub-departments'
       },
       {
-        text: 'Tasks',
-        path: '/tasks'
-      }
+        text: 'Personnel Card',
+        path: '/personnel'
+      },
+      // {
+      //   text: 'Profile',
+      //   path: '/profile'
+      // },
+      // {
+      //   text: 'Tasks',
+      //   path: '/tasks'
+      // }
     ]
   }
 ];

@@ -7,13 +7,25 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
 import { DxDataGridModule, DxFormModule } from 'devextreme-angular';
 import { DepartmentComponent } from './pages/departments/department.component';
+import { SubDepartmentComponent } from './pages/sub-departments/sub-department.component';
+import { PersonnelComponent } from './pages/personnel/personnel.component';
 
 const routes: Routes = [
-  // {
-  //   path: 'departments',
-  //   component: DepartmentComponent,
-  //   canActivate: [ AuthGuardService ]
-  // },
+  {
+    path: 'departments',
+    component: DepartmentComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'sub-departments',
+    component: SubDepartmentComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'personnel',
+    component: PersonnelComponent,
+    canActivate: [ AuthGuardService ]
+  },
   {
     path: 'tasks',
     component: TasksComponent,
