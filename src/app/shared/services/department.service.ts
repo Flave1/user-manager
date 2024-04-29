@@ -2,7 +2,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { Department } from '../../../models/departments';
 import { environment } from '../../../environment';
 
@@ -33,4 +32,5 @@ export class DepartmentService {
     deleteDepartment(id: number): Observable<void> {
         return this.http.delete<void>(`${this.apiUrl}/${id}`);
     }
+
 }

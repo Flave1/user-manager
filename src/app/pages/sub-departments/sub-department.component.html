@@ -1,2 +1,16 @@
-<h2 class="content-block">Sub Departments</h2>
-
+<dx-form
+  [formData]="formData"
+  [showColonAfterLabel]="true"
+  [labelLocation]="'left'"
+  [colCount]="2"
+  [elementAttr]="{class: 'form-container'}"
+>
+  <dxi-item dataField="name" editorType="dxTextBox" editorOptions="{placeholder: 'Enter Sub-Department Name'}"></dxi-item>
+  <dxi-item dataField="departmentId" editorType="dxSelectBox" [editorOptions]="departmentOptions"></dxi-item>
+  <div class="button-container">
+    <dx-button
+      text="Add Sub-Department"
+      (onClick)="addSubDepartment()"
+    ></dx-button>
+  </div>
+</dx-form>

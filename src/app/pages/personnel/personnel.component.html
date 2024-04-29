@@ -1,2 +1,66 @@
-<h2 class="content-block">Personnel Cards</h2>
+<div class="content-block dx-card responsive-paddings">
+  <div class="form-avatar">
+    <img
+      src="https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/{{
+        employee.Picture
+      }}"
+    />
+  </div>
+  <span>{{ employee.Notes }}</span>
+</div>
 
+<div class="content-block dx-card responsive-paddings">
+  <dx-form
+    [formData]="formData"
+    [showColonAfterLabel]="true"
+    [labelLocation]="'left'"
+    [colCount]="2"
+    [elementAttr]="{ class: 'form-container' }"
+  >
+    <dxi-item
+      dataField="name"
+      editorType="dxTextBox"
+      editorOptions="{placeholder: 'Enter Name'}"
+    ></dxi-item>
+    <dxi-item
+      dataField="surname"
+      editorType="dxTextBox"
+      editorOptions="{placeholder: 'Enter Surname'}"
+    ></dxi-item>
+    <dxi-item
+      dataField="placeOfBirth"
+      editorType="dxTextBox"
+      editorOptions="{placeholder: 'Enter Place of Birth'}"
+    ></dxi-item>
+    <dxi-item
+      dataField="dateOfBirth"
+      editorType="dxDateBox"
+      editorOptions="{placeholder: 'Enter Date of Birth'}"
+    ></dxi-item>
+    <dxi-item
+      dataField="gender"
+      editorType="dxSelectBox"
+      editorOptions="{items: ['Male', 'Female', 'Other'], placeholder: 'Select Gender'}"
+    ></dxi-item>
+    
+    <dxi-item
+      dataField="department"
+      editorType="dxSelectBox"
+      [editorOptions]="departmentOptions"
+    ></dxi-item>
+    <dxi-item
+      dataField="subDepartment"
+      editorType="dxSelectBox"
+      [editorOptions]="subDepartmentOptions"
+    ></dxi-item>
+    
+    <dxi-item
+      dataField="entryDate"
+      editorType="dxDateBox"
+      editorOptions="{placeholder: 'Enter Entry Date'}"
+    ></dxi-item>
+    <div class="button-container">
+      <dx-button text="Save" (onClick)="saveForm()"></dx-button>
+    </div>
+  </dx-form>
+</div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import 'devextreme/data/odata/store';
+import { Department } from '../../../models/departments';
 
 @Component({
   templateUrl: 'department.component.html'
@@ -7,8 +8,16 @@ import 'devextreme/data/odata/store';
 
 export class DepartmentComponent {
 
+  formData: Department = {
+    name: ''
+  };
+
+  saveForm(): void {
+  }
 
   constructor() {
-    
+
   }
+
+
 }

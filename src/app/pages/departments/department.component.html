@@ -1,2 +1,15 @@
-<h2 class="content-block">Departments</h2>
-
+<dx-form
+  [formData]="formData"
+  [showColonAfterLabel]="true"
+  [labelLocation]="'left'"
+  [colCount]="2"
+  [elementAttr]="{class: 'form-container'}"
+>
+  <dxi-item dataField="name" editorType="dxTextBox" editorOptions="{placeholder: 'Enter Name'}"></dxi-item>
+  <div class="button-container">
+    <dx-button
+      text="Save"
+      (onClick)="saveForm()"
+    ></dx-button>
+  </div>
+</dx-form>
